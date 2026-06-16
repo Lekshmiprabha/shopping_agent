@@ -3,7 +3,7 @@ Text Search Agent
 ─────────────────
 Searches store.db products by natural language query.
 Enriches results with avg rating from the reviews table.
-Never invents products not in the database.
+Never invents products not in the database and never returns products that don't match the query.
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
