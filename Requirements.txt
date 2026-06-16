@@ -1,0 +1,47 @@
+# ============================================================
+# AI Shopping Assistant - Requirements
+# Python 3.10+
+# SQLite (built-in) — no DB server needed
+# ============================================================
+
+# --- UI Framework ---
+streamlit>=1.35.0                  # Main UI framework
+
+# --- LLM & Agent Orchestration ---
+anthropic>=0.28.0                  # Claude API (text + vision/multimodal)
+langchain>=0.2.0                   # Multi-agent orchestration framework
+langchain-anthropic>=0.1.15        # LangChain x Claude integration
+langchain-community>=0.2.0         # Community tools & integrations
+langgraph>=0.1.0                   # Agent graph / multi-agent workflows
+
+# --- Database ---
+sqlalchemy>=2.0.0                  # ORM for product DB & order DB
+# sqlite3 is built-in — no install needed
+
+# --- Vector Search (semantic product search) ---
+chromadb>=0.5.0                    # Local vector store for product embeddings
+sentence-transformers>=3.0.0       # Embedding model for product text search
+
+# --- Image / Vision Support (phase 2 — image-based search) ---
+Pillow>=10.3.0                     # Image loading & preprocessing
+opencv-python-headless>=4.9.0      # Image processing (headless = no GUI deps)
+
+# --- Data Utilities ---
+pydantic>=2.7.0                    # Data validation & schemas for agent I/O
+python-dotenv>=1.0.0               # Load API keys from .env file
+requests>=2.32.0                   # HTTP calls if external APIs are used
+httpx>=0.27.0                      # Async HTTP (used by Anthropic SDK internally)
+
+# --- Data Handling ---
+pandas>=2.2.0                      # Tabular display of search results & orders
+numpy>=1.26.0                      # Numerical ops (embeddings, similarity scores)
+
+# --- Timestamps & Utilities ---
+pytz>=2024.1                       # Timezone-aware timestamps for order table
+
+# --- Logging ---
+loguru>=0.7.2                      # Structured logging across agents
+
+# --- Testing (dev only) ---
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
