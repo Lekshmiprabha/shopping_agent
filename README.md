@@ -83,3 +83,4 @@ Then open the local Streamlit URL shown in the terminal.
 - The app is designed for a local development environment.
 - It initializes the database and builds the search index on startup.
 - If you want to modify the product data or order flow, update the database models and UI modules.
+
